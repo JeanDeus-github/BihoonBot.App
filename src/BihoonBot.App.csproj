@@ -1,4 +1,9 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<!--<copyright file="IDiscordClientService.cs" company="Jean Deus">
+     Copyright (c) Jean Deus. All rights reserved.
+    </copyright>
+-->
+
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
