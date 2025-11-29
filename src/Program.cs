@@ -2,6 +2,10 @@
 // Copyright (c) Jean Deus. All rights reserved.
 // </copyright>
 
+using BihoonBot.App.Services;
+using Discord.WebSocket;
+using Microsoft.Extensions.DependencyInjection;
+
 /// <summary>
 /// Provides the entry point for the application.
 /// </summary>
@@ -16,6 +20,10 @@ public class Program
     /// <returns>A task that represents the asynchronous operation of the application's entry point.</returns>
     public static async Task Main(string[] args)
     {
+        IServiceProvider services = new ServiceCollection()
+            .AddSingleton<DiscordSocketClient>()
+            .AddSingleton<DiscordClientService>()
+            .BuildServiceProvider();
 
     }
 }
