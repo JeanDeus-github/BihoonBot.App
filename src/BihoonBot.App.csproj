@@ -26,5 +26,11 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
   </ItemGroup>
-
+  <!-- Custom clean behavior -->
+  <Target Name="DeleteBinAndObjAfterClean" AfterTargets="Clean">
+    <!-- Delete bin and obj folders -->
+    <RemoveDir Directories="$(BaseOutputPath)" />
+    <RemoveDir Directories="$(BaseIntermediateOutputPath)" />
+    <Message Text="BihoonBot.App: Delete $(BaseOutputPath) and $(BaseIntermediateOutputPath)" Importance="high" />
+  </Target>
 </Project>
